@@ -1,3 +1,5 @@
+Marvel Defiance: Multiverse Madness 
+
 What if we crossed the bounds of reality and crossed into the multiverse?
 Marvel Defiance: Multiverse Madness answers that question. A turn-based fight game that has a team of three Heroes and Villains going head-to-head to secure the future of the multiverse.
 The user has the option to select a team of heroes and villains or allow a computer-generated team to be selected for them. The computer will then generate an opposition team, each round, for our multiversal team to battle. 
