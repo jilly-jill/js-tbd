@@ -3,7 +3,6 @@ const { default: axios } = require("axios");
 
 async function getMarvelCharacterData() {
   const ts = new Date().getTime();
-
   const md5Digest = md5(
     ts + process.env.MARVEL_PRIVATE_KEY + process.env.MARVEL_PUBLIC_KEY
   );
