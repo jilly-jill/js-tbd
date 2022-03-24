@@ -3,7 +3,6 @@ const style = require('.style.css');
 
 function Navbar(){
 
-    return(
   <div>
     <nav class="nav">
       <div class="container">
@@ -23,6 +22,6 @@ function Navbar(){
       </div>
   </nav>
         </div>
-    )};
+    };
 
 module.exports = Navbar;
