@@ -19,7 +19,6 @@ const cpu = {
 }
 
 
-
 //call functions then loop while in play
 fight(userTeam, cpuTeam);
 
@@ -27,19 +26,15 @@ while (user.isPlaying === true && cpu.isPlaying === true) {
     fight(user.team, cpu.team)
 }
 
-
+document.getElementById("roll").addEventListener("click", rollDice());
 
 function rollDice() {
     // return Math.floor(Math.random() * 20);
-    let randomNumber = function(low, high) {
+      let randomNumber = function(low, high) {
         return Math.floor( Math.random() * (1 + high - low) ) + low;
       };
-      
-      let cube = document.getElementById('cube');
-      let outcome = document.getElementById('outcome');
-      let outcomeText = document.getElementById('text');
-      let messageDelay; //timer
-      let fadeout; //timer
+      document.getElementById("cube").setAttribute("class",`show-${randInt}`);
+    
       const messages = [
         'A T T A C K ! -1',
         'Martial Arts Kick! -2',
@@ -62,51 +57,58 @@ function rollDice() {
         'Punched With Infinity Stone!! -19',
         'T E A M  A S S E M B L E S -20'
       ];
+      alert(messages);
+
 }
 
+
+function removeCard(elementid) {
+    const element = document.getElementById(elementid);
+    element.parentNode.removeChild(element);
+}
 
 function fight(userTeam=user.team, cpuTeam=cpu.team) {
     user.isPlaying = true;
 
-    // cpu.current_fighter = cpuFighter;
-    // user.current_fighter = userFighter;
-   // let defeated;
-    const winMessage = `You injured ${defeated}! Enemies health is now ${cpu.health}`;
-    const loseMessage = `Your ${defeated} was injured! Team Health is now ${user.health}`;
+    const cardBody = evt.target.parentElement;
 
     // USER TURN
-    /* button roll = rollDice() , button calls rollDice() on click?*/
     cpu.health -= randomNumber;  // subtract return variable from CPU health
 
     if (cpu.health < 70 && cpu.health > 50) {
         cpu.team.shift();
+        removeCard("c1");
     } 
 
     if (cpu.health < 70 && cpu.health < 50) {
         cpu.team.pop();
+        removeCard("c3");
     }
 
     if (cpu.health === 0) {
         cpu.team.shift();
+        removeCard("c2")
         user.enemies_defeated = cpu.team;
         cpu.isPlaying = false;
     }
-
+    
     //CPU TURN
-    /* button roll = rollDice() , button calls rollDice() for CPU fake press*/
     user.health -= randomNumber;// subtract from User health
     
     
     if (user.health < 70 && user.health > 50) {
         user.team.shift();
+        removeCard("p1");
     } 
     
     if (user.health < 70 && user.health < 50) {
         user.team.pop();
+        removeCard("p3");
     }
 
     if (user.health === 0) {
         user.team.shift();
+        removeCard("p2")
         user.isPlaying = false;
     }
 
