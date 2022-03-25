@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Avengers";
   src: url("../Media/Fonts/Avengers.TTF");
 }
@@ -43,7 +43,7 @@
    
   @media all and (max-width: 480px) { }
  
-}
+} */
 html {
   box-sizing: border-box;
 }
@@ -56,7 +56,7 @@ body {
 
   
 }
-
+/* 
 .nav {
   width: 100%;
   position: fixed;
@@ -165,10 +165,10 @@ line-height: 20px;
   color: #F0131E;
   font-size: 1.5rem;
   transition: .45s ease-in-out; 
-}
+} */
 
 /* Home section */
-
+/* 
 .home {
   width: 100%;
   height: 50vh;
@@ -427,7 +427,7 @@ line-height: 20px;
 .affix {
   padding: 0;
   background-color: #111;
-}
+} */
 
 
 #break_for_animation{
