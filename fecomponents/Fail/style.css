@@ -198,7 +198,7 @@ font-size: 5rem;
 #audio_section{
 display: flex;
 flex-direction: row;
-padding: 1rem ;
+padding: 1rem 3rem 1rem 3rem;
 margin: .25rem .25rem;
 position: relative;
 }
