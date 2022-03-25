@@ -65,14 +65,17 @@ function rollDice() {
 }
 
 
+function removeCard(elementid) {
+    const element = document.getElementById(elementid);
+    element.parentNode.removeChild(element);
+}
+
 function fight(userTeam=user.team, cpuTeam=cpu.team) {
     user.isPlaying = true;
 
-    // cpu.current_fighter = cpuFighter;
-    // user.current_fighter = userFighter;
-   // let defeated;
-    const winMessage = `You injured ${defeated}! Enemies health is now ${cpu.health}`;
-    const loseMessage = `Your ${defeated} was injured! Team Health is now ${user.health}`;
+    const cardBody = evt.target.parentElement;
+
+    
 
     // USER TURN
     /* button roll = rollDice() , button calls rollDice() on click?*/
@@ -80,18 +83,21 @@ function fight(userTeam=user.team, cpuTeam=cpu.team) {
 
     if (cpu.health < 70 && cpu.health > 50) {
         cpu.team.shift();
+        removeCard("c1");
     } 
 
     if (cpu.health < 70 && cpu.health < 50) {
         cpu.team.pop();
+        removeCard("c3");
     }
 
     if (cpu.health === 0) {
         cpu.team.shift();
+        removeCard("c2")
         user.enemies_defeated = cpu.team;
         cpu.isPlaying = false;
     }
-
+    
     //CPU TURN
     /* button roll = rollDice() , button calls rollDice() for CPU fake press*/
     user.health -= randomNumber;// subtract from User health
@@ -99,14 +105,17 @@ function fight(userTeam=user.team, cpuTeam=cpu.team) {
     
     if (user.health < 70 && user.health > 50) {
         user.team.shift();
+        removeCard("p1");
     } 
     
     if (user.health < 70 && user.health < 50) {
         user.team.pop();
+        removeCard("p3");
     }
 
     if (user.health === 0) {
         user.team.shift();
+        removeCard("p2")
         user.isPlaying = false;
     }
 
