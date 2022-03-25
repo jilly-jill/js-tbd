@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "Avengers";
+  src: url("../Media/Fonts/Avengers.TTF");
+}
+@font-face {
+  font-family: "CaptMarvel";
+  src: url("../Media/Fonts/CaptMarvel.TTF");
+}
+@font-face {
+  font-family: "Disassembled";
+  src: url("../Media/Fonts/Disassembled.TTF");
+}
+@font-face {
+  font-family: "Avenged";
+  src: url("../Media/Fonts/Avenged.ttf");
+}
+@font-face {
+  font-family: "xmen";
+  src: url("../Media/Fonts/xmen.ttf");
+}
+@font-face {
+  font-family: "HA";
+  src: url("../Media/Fonts/HA.ttf");
+}
+@font-face {
+  font-family: "HA2";
+  src: url("../Media/Fonts/HA.ttf2");
+}
+@font-face {
+  font-family: "BP";
+  src: url("../Media/Fonts/BP.ttf");
+}
+
+:root {
+  max-height: 1200px;
+  max-width: 1920px;
+
+  @media all and (min-width: 1024px) and (max-width: 1280px) { }
+ 
+  @media all and (min-width: 768px) and (max-width: 1024px) { }
+   
+  @media all and (min-width: 480px) and (max-width: 768px) { }
+   
+  @media all and (max-width: 480px) { }
+ 
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  background-image: url("../Media/Photos/multivers.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+
+  
+}
+
+#break_for_animation{
+  padding-top: 100px; 
+  display: flex;
+  position: relative;
+  max-width: 1400px;
+  max-height: 1000px;
+}
+.jumbotron{
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  height: 100%;
+  width: 100%;
+
+
+}
+
+ @keyframes defeat{ 
+
+    from{
+      background-image:url('../Media/Photos/bpmonger.png');
+     font-size: 2rem;
+     width: 1000px;
+     height: 750px;
+     opacity: .92;
+    }
+
+  to {
+    background-image: url('../Media/Photos/zomcap.png');
+justify-content: center;
+background-color: 
+#020202;
+font-size: 5rem;
+}
+  
+}
+.contain{
+      
+   /* position: relative; */
+   width: 1300px;
+   height: 750px;
+   border: 1em black solid;
+   background:#020202;
+   background-image:url('../Media/Photos/bpmonger.png');
+   animation-name:defeat;
+   animation-duration: 15s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+   background-position: fixed;
+   font-family: Disassembled;
+
+
+} 
+  .lead{
+    font-family: CaptMarvel;
+    font-size: 2.1rem;
+    padding: 5rem;
+    color: white;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .display-4{
+    position: relative;
+    opacity: 0.9;
+    align-items: center;
+    padding: 10rem 5rem 10rem 10rem; 
+    justify-content: center;
+    color: #fff;
+    bottom: 10px;
+    padding-bottom: 20px;
+    font-size: 5rem;
+  }
+
+  #try_again{
+    max-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1em black solid;
+    background:#020202;
+    background-image: url('../Media/Photos/bpmonger.png');
+    padding: 2rem 5rem;
+    font-family: CaptMarvel;
+    font-size: 2.1rem;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    color: white;
+
+   
+  }
+  #wrap{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 5rem 2rem 5rem;
+  }
+  button{
+    margin: 40px 500px;
+    position: relative;
+    flex-direction: row;
+    border-radius: 54%;
+    padding: 10px; 
+    font-style: oblique;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    height: 100px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    box-shadow: .5px 2px .5px 1px white;
+    background: -webkit-linear-gradient(
+      130deg,
+      #000 12%,
+      #010101 46%,
+      #020202 100%);
+      border: solid .25rem #FFF;
+      transition-duration: 0.3s;
+      
+  }
+  #play_button:hover{
+    background-color: #020202;
+    color:white;
+    box-shadow: 1px 2px 1px 1px white;
+    transform: scale(2,2);
+    border: solid .25rem white; 
+    font-family: BP;
+  
+  } 
+
+#audio_section{
+display: flex;
+flex-direction: row;
+padding: 1rem ;
+margin: .25rem .25rem;
+position: relative;
+}
