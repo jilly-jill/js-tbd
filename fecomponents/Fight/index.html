@@ -101,9 +101,19 @@
       </div>
     </div>
     <hr>
-    <section class="cube-container">
-        <div id="cube" class="show-1">
-          <figure class="face01" id="color">1</figure>
+    <div class="container">
+      <div class="row justify-content-evenly">
+        <div class="col-4 order-first active" id="currentP">
+          Current Player
+        </div>
+        <div class="col-4 order-last active" id="currentC">
+          Current Opponent
+        </div>
+      </div>
+    </div>
+    <section class="cube-container" >
+        <div id="cube">
+          <figure class="face01">1</figure>
           <figure class="face02">2</figure>
           <figure class="face03">3</figure>
           <figure class="face04">4</figure>
@@ -127,7 +137,59 @@
       </section>
       <section id="buttons">
         <input type="button" name="roll" value="Roll it!" id="roll">
-      </section>
-      
+      </section> 
+      <br>
+      <hr>
+      <br>
+      <div class="footer-dark align-bottom">
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-md-3 item">
+                <h3>Multiverse</h3>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Team Selection</a></li>
+                  <li><a href="#">Fight</a></li>
+                  <li><a href="#">Fail</a></li>
+                  <li><a href="#">Win</a></li>
+                  <li><a href="#">Leaderboard</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-6 col-md-3 item">
+                <!-- <h3>About</h3>
+                <ul>
+                  <li><a href="#">Company</a></li>
+                  <li><a href="#">Team</a></li>
+                  <li><a href="#">Careers</a></li>
+                </ul> -->
+              </div>
+              <div class="col-md-6 item text">
+                <h3>WeBasic</h3>
+                <p>
+                  Praesent sed lobortis mi. Suspendisse vel placerat ligula.
+                  Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis
+                  tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel
+                  in justo.
+                </p>
+              </div>
+              <div class="col item social">
+                <a href="#" id="icon"><i class="icon ion-social-facebook"></i></a
+                ><a href="#" id="icon"><i class="icon ion-social-twitter"></i></a
+                ><a href="#" id="icon"><i class="icon ion-social-snapchat"></i></a
+                ><a href="#" id="icon"><i class="icon ion-social-instagram"></i></a>
+              </div>
+            </div>
+            <p class="copyright">WeBasic © 2022</p>
+          </div>
+        </footer>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+      <script src="./script.js"></script>
+      <script src="../../Helpers/index.js"></script>
+      <script src="../../index.js"></script>
+      <script src="./script.js"></script>
 </body>
 </html>
