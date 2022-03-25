@@ -106,6 +106,7 @@ function fight(userTeam=user.team, cpuTeam=cpu.team) {
 
 module.exports = {
     user,
+    rollDice
 }
 
 
