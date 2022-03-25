@@ -41,7 +41,7 @@ app.get("/api/image", async (req,res) => {
     const imgName3 = marvelDataImage.data.results[randomInt3].name;
 
     res.send({imgUrl1,imgUrl2,imgUrl3,imgName1,imgName2,imgName3})
-
+    
 })
 
 
