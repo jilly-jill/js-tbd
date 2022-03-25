@@ -4,7 +4,7 @@ const express = require("express");
 const { getMarvelCharacterData } = require("./Helpers/index");
 
 const app = express();
-app.use(express.static("fecomponents/TeamSelect"))
+app.use(express.static("fecomponents"))
 const PORT = 3030;
 
 app.get("/", (req, res) => {
