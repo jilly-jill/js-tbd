@@ -5,13 +5,22 @@ const { getMarvelCharacterData } = require("./Helpers/index");
 
 const app = express();
 app.use(express.static("fecomponents"))
+app.use(express.static("fecomponents/Landing"))
 const PORT = 3030;
-
+// app.engine('html', require('ejs').renderFile)
 app.get("/", (req, res) => {
 
-  res.sendFile(__dirname + "/fecomponents/TeamSelect/index.html")
+  res.sendFile(__dirname + "/fecomponents/Landing/index.html")
   
 });
+
+
+  app.get("/TeamSelect/index.html", (req, res) => {
+  
+    res.sendFile(__dirname + "/fecomponents/TeamSelect/index.html")
+    
+  });
+
 app.get("/characters", async (req, res) => {
   const marvelData = await getMarvelCharacterData();
 
