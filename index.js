@@ -1,15 +1,15 @@
 require("dotenv").config();
 
 const express = require("express");
-const { getMarvelCharacterData } = require("./Helpers");
+const { getMarvelCharacterData } = require("./Helpers/index");
 
 const app = express();
-app.use(express.static("selectTeam"))
+app.use(express.static("fecomponents/TeamSelect"))
 const PORT = 3030;
 
 app.get("/", (req, res) => {
 
-  res.sendFile(__dirname + "/selectTeam/index.html")
+  res.sendFile(__dirname + "/fecomponents/TeamSelect/index.html")
   
 });
 app.get("/characters", async (req, res) => {
@@ -19,16 +19,17 @@ app.get("/characters", async (req, res) => {
 });
 
 app.get("/api/image", async (req,res) => {
-  const marvelData = await getMarvelCharacterData();
-    const randomInt1 = Math.floor(Math.random()* marvelData.data.results.length);
-    const imgUrl1 = `${marvelData.data.results[randomInt1].thumbnail.path}.${marvelData.data.results[randomInt1].thumbnail.extension}`
-    const imgName1 = marvelData.data.results[randomInt1].name;
-    const randomInt2 = Math.floor(Math.random()* marvelData.data.results.length);
-    const imgUrl2 = `${marvelData.data.results[randomInt2].thumbnail.path}.${marvelData.data.results[randomInt2].thumbnail.extension}`
-    const imgName2 = marvelData.data.results[randomInt2].name;
-    const randomInt3 = Math.floor(Math.random()* marvelData.data.results.length);
-    const imgUrl3 = `${marvelData.data.results[randomInt3].thumbnail.path}.${marvelData.data.results[randomInt3].thumbnail.extension}`
-    const imgName3 = marvelData.data.results[randomInt3].name;
+  const marvelDataImage = await getMarvelCharacterData();
+  
+    const randomInt1 = Math.floor(Math.random()* marvelDataImage.data.results.length);
+    const imgUrl1 = `${marvelDataImage.data.results[randomInt1].thumbnail.path}.${marvelDataImage.data.results[randomInt1].thumbnail.extension}`
+    const imgName1 = marvelDataImage.data.results[randomInt1].name;
+    const randomInt2 = Math.floor(Math.random()* marvelDataImage.data.results.length);
+    const imgUrl2 = `${marvelDataImage.data.results[randomInt2].thumbnail.path}.${marvelDataImage.data.results[randomInt2].thumbnail.extension}`
+    const imgName2 = marvelDataImage.data.results[randomInt2].name;
+    const randomInt3 = Math.floor(Math.random()* marvelDataImage.data.results.length);
+    const imgUrl3 = `${marvelDataImage.data.results[randomInt3].thumbnail.path}.${marvelDataImage.data.results[randomInt3].thumbnail.extension}`
+    const imgName3 = marvelDataImage.data.results[randomInt3].name;
 
     res.send({imgUrl1,imgUrl2,imgUrl3,imgName1,imgName2,imgName3})
 
