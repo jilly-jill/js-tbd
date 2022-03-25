@@ -332,10 +332,6 @@ margin-bottom: auto;}
   padding-top: 34%;
   padding-right: 6%;
   top: 20%;
-  /* background: #000; Old browsers */
-  background: -moz-linear-gradient(130deg, #050202 10%, #010101 62%, #000 80%);
-  /* FF3.6+ */
-  background: -webkit-gradient(130deg, #050202 10%, #010101 46%, #000 100%);
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(
     130deg,
