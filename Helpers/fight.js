@@ -41,26 +41,26 @@ function rollDice() {
       let messageDelay; //timer
       let fadeout; //timer
       const messages = [
-        'Your Bard was killed',
-        'You smote the orc',
-        'You escaped the Ice Dragon',
-        'Lightning Bolt succeeded',
-        'Critical hit',
-        'You are Lawful Evil',
-        'You fell into the Well of Sorrows',
-        'You found the Goblet of Endless Grog',
-        'You encountered a Harpy',
-        'Charisma + 10',
-        'You lose 11 Hit Points',
-        'You disarmed the trap',
-        'Plate Mail + 3',
-        '14 Damage',
-        'Spell failure',
-        'Backstab successful',
-        'Your wand broke',
-        'Surprise Attack',
-        'You broke through the door',
-        'You turned to stone'
+        'A T T A C K ! -1',
+        'Martial Arts Kick! -2',
+        'Weaponed Summoned! -3',
+        'Combo Punches -4',
+        'Dart Attack -5',
+        'Lightning bolt succeeded -6',
+        'Landing Stomp -7',
+        'Heat Blast -8',
+        'Ebony Blade Cut -9',
+        'We Could Do This All Day." -10',
+        'Lets Get Nuts! -11',
+        'Level 3 HYPER COMBO! -12',
+        'Tell Us: Do You Bleed? You Will." -13',
+        'Throws a Car!  -14',
+        'Throws a Train! -15',
+        'Dual Attack -16',
+        'S.H.E.I.L.D. fires all airship cannons  -17',
+        'Army Uses Predator Drone! -18',
+        'Punched With Infinity Stone!! -19',
+        'T E A M  A S S E M B L E S -20'
       ];
 }
 
