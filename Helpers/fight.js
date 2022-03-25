@@ -78,9 +78,8 @@ function fight(userTeam=user.team, cpuTeam=cpu.team) {
         removeCard("c3");
     }
 
-    if (cpu.health === 0) {
+    if (cpu.health <= 0) {
         removeCard("c2")
-        user.enemies_defeated = cpu.team;
         cpu.isPlaying = false;
     }
     
@@ -96,7 +95,7 @@ function fight(userTeam=user.team, cpuTeam=cpu.team) {
         removeCard("p3");
     }
 
-    if (user.health === 0) {
+    if (user.health <= 0) {
         removeCard("p2")
         user.isPlaying = false;
     }
