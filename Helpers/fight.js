@@ -1,25 +1,21 @@
-const team = require('searching');
+const userTeam = require('searching');
+const cpuTeam = require('../index');
 
 // define the user and cpu
 const user = {
   "health": 100,
-  "team": teamData,
-  "enemies_defeated": [],
+  "team": userTeam,
   "isPlaying": false
-}
-
-function getCpuTeam() {
-
 }
 
 const cpu = {
   "health": 100,
-  "team": [],
+  "team": cpuTeam,
   "isPlaying": true
 }
 
 
-//call functions then loop while in play
+//call function then loop while in play
 fight(userTeam, cpuTeam);
 
 while (user.isPlaying === true && cpu.isPlaying === true) {
@@ -29,7 +25,7 @@ while (user.isPlaying === true && cpu.isPlaying === true) {
 document.getElementById("roll").addEventListener("click", rollDice());
 
 function rollDice() {
-    // return Math.floor(Math.random() * 20);
+    
       let randomNumber = function(low, high) {
         return Math.floor( Math.random() * (1 + high - low) ) + low;
       };
@@ -58,10 +54,9 @@ function rollDice() {
         'T E A M  A S S E M B L E S -20'
       ];
       alert(messages);
-
 }
 
-
+//to remove characters that are defeated
 function removeCard(elementid) {
     const element = document.getElementById(elementid);
     element.parentNode.removeChild(element);
@@ -73,46 +68,44 @@ function fight(userTeam=user.team, cpuTeam=cpu.team) {
     const cardBody = evt.target.parentElement;
 
     // USER TURN
-    cpu.health -= randomNumber;  // subtract return variable from CPU health
+    cpu.health -= randomNumber;  // subtract CPU health
 
     if (cpu.health < 70 && cpu.health > 50) {
-        cpu.team.shift();
         removeCard("c1");
     } 
 
     if (cpu.health < 70 && cpu.health < 50) {
-        cpu.team.pop();
         removeCard("c3");
     }
 
     if (cpu.health === 0) {
-        cpu.team.shift();
         removeCard("c2")
         user.enemies_defeated = cpu.team;
         cpu.isPlaying = false;
     }
     
     //CPU TURN
-    user.health -= randomNumber;// subtract from User health
+    user.health -= randomNumber; // subtract User health
     
     
     if (user.health < 70 && user.health > 50) {
-        user.team.shift();
         removeCard("p1");
     } 
     
     if (user.health < 70 && user.health < 50) {
-        user.team.pop();
         removeCard("p3");
     }
 
     if (user.health === 0) {
-        user.team.shift();
         removeCard("p2")
         user.isPlaying = false;
     }
 
 }
 
+
+module.exports = {
+    user,
+}
 
 

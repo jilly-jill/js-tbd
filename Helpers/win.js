@@ -13,3 +13,6 @@ alert(`Health remaining after battle ${yourHealth}`);
 //display defeated team
 alert(`You defeated ${cpu.team}`);
 
+module.exports = {
+    username,
+}

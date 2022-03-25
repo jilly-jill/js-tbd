@@ -39,3 +39,7 @@ app.get("/api/image", async (req,res) => {
 app.listen(PORT, () => {
   console.log("Listening... watcha say?");
 });
+
+module.exports = {
+  getMarvelCharacterData,
+}
