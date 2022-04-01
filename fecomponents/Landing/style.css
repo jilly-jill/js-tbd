@@ -13,18 +13,7 @@
 @font-face {
   font-family: "Avenged";
   src: url("../Media/Fonts/Avenged.ttf");
-}
-@font-face {
-  font-family: "xmen";
-  src: url("../Media/Fonts/xmen.ttf");
-}
-@font-face {
-  font-family: "HA";
-  src: url("../Media/Fonts/HA.ttf");
-}
-@font-face {
-  font-family: "HA2";
-  src: url("../Media/Fonts/HA.ttf2");
+
 }
 @font-face {
   font-family: "BP";
@@ -32,8 +21,8 @@
 }
 
 :root {
-  max-height: 1200px;
-  max-width: 1920px;
+  max-height: 100vh;
+  max-width: 100vw;
 
   @media all and (min-width: 1024px) and (max-width: 1280px) { }
  
@@ -166,7 +155,6 @@ line-height: 20px;
   transition: .45s ease-in-out; 
 }
 
-/* Home section */
 
 .home {
   width: 100%;
@@ -431,12 +419,13 @@ line-height: 20px;
 /* $CAROUSEL */
 
 #carousel_container {
-  top: 10rem;
+  top: 3rem;
   box-sizing: content-box;
   max-width: 100vw;
   max-height: 100vh;
   object-fit: cover;
   overflow: hidden;
+  position: relative;
   @media all and (min-width: 480px) and (max-width: 1280px) { 
     position: relative;
     
@@ -445,13 +434,13 @@ line-height: 20px;
  
 }
 .carousel {
-  padding-top: 150px;
+  padding-top: 0px;
   width: 100%;
   max-width: 100vw;
-  height: 100%;
+  height: 120%;
   max-height: 100vh;
-  position: absolute;
-  overflow: hidden;
+  position: relative;
+
 @media all and (min-width: 1024px) and (max-width: 1280px) { }
  
 @media all and (min-width: 768px) and (max-width: 1024px) { }
@@ -462,27 +451,28 @@ line-height: 20px;
  
 
 }
+/* 1 PANE @ 100% FOR 5 PANES*/
 .panes {
   position: relative;
-  width: 500%; /* Number of panes * 100% */
-  height: 50%;
-  max-height: 100%;
+  width: 500%;
+  height: 110%;
+  max-height: 100vh;
   -webkit-animation: carousel 30s infinite;
   -moz-animation: carousel 30s infinite;
   animation: carousel 30s infinite;
   @media all and (min-width: 1024px) and (max-width: 1280px) {
     height: auto;
     padding-bottom: 50px;
+    overflow: hidden;
    }
-
- 
 }
 .panes > li {
   position: relative;
   float: right;
-  width: 20%; /* 100 / number of panes */
-  height: 100%;
-  margin-bottom: 12rem;
+  width: 20%;
+  height: 85%;
+  margin-bottom: auto;
+ 
   @media all and (min-width: 1024px) and (max-width: 1280px) { 
   margin-bottom: auto;}
 @media all and (min-width: 768px) and (max-width: 1024px) { 
@@ -493,12 +483,13 @@ margin-bottom: auto;}
  
 }
 .carousel img {
-  /* position: absolute; */
+  position: absolute;
   width: 100%;
   max-width: 100%;
   max-height: 100vh;
   background-color: rgba(0, 0, 0, 0.85);
-  padding: 0.75rem;
+  padding: 1rem;
+  overflow: hidden;
   @media all and (min-width: 1024px) and (max-width: 1280px) {
     padding: .5rem;
     height: 100%;
@@ -525,12 +516,13 @@ margin-bottom: auto;}
 }
   
 }
-.carousel h2 {
+.carousel {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.75);
   fill-opacity: 0.1;
-  width: auto;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
   @media all and (min-width: 1024px) and (max-width: 1280px) { }
  
 @media all and (min-width: 768px) and (max-width: 1024px) { }
@@ -541,106 +533,10 @@ margin-bottom: auto;}
  
 }
 
-@-moz-keyframes carousel {
-  0% {
-    left: 0;
-  }
-  11% {
-    left: 0;
-  }
-  12.5% {
-    left: -100%;
-  }
-  23.5% {
-    left: -100%;
-  }
-  25% {
-    left: -100%;
-  }
-  36% {
-    left: -200%;
-  }
-  37.5% {
-    left: -200%;
-  }
-  48.5% {
-    left: -200%;
-  }
-  50% {
-    left: -300%;
-  }
-  61% {
-    left: -300%;
-  }
-  73.5% {
-    left: -300%;
-  }
-  75% {
-    left: -400%;
-  }
-  86% {
-    left: -400%;
-  }
-  87.5% {
-    left: -400%;
-  }
-  98.5% {
-    left: 0%;
-  }
-  100% {
-    left: 0;
-  }
-}
-@-webkit-keyframes carousel {
-  0% {
-    left: 0;
-  }
-  11% {
-    left: 0;
-  }
-  12.5% {
-    left: -100%;
-  }
-  23.5% {
-    left: -100%;
-  }
-  25% {
-    left: -100%;
-  }
-  36% {
-    left: -200%;
-  }
-  37.5% {
-    left: -200%;
-  }
-  48.5% {
-    left: -200%;
-  }
-  50% {
-    left: -300%;
-  }
-  61% {
-    left: -300%;
-  }
-  73.5% {
-    left: -300%;
-  }
-  75% {
-    left: -400%;
-  }
-  86% {
-    left: -400%;
-  }
-  87.5% {
-    left: -400%;
-  }
-  98.5% {
-    left: 0%;
-  }
-  100% {
-    left: 0;
-  }
-}
+/* PERCENTAGE INDICATES POINT OF ANIMATION CYCLE FOR THE ANIMATION
+ACTION*/
+/* PUSH 100% RIGHT TO RECEIVE NEXT CAROUSEL ITEM*/
+
 @keyframes carousel {
   0% {
     left: 0;
@@ -694,54 +590,30 @@ margin-bottom: auto;}
 
 .content {
   position: absolute;
+  height: 100%;
+  top: 80%;
   right: 0%;
-  left: 75%;
   bottom: 0%;
-  height: 111px;
-  width: 25%;
-  padding-left: 0%;
-  padding-top: 34%;
-  padding-right: 6%;
-  top: 20%;
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(
-    130deg,
-    #050202 10%,
-    #010101 46%,
-    #000 100%
-  );
-  /* Chrome10+,Safari5.1+ */
+  padding: 2%;
   background: -o-linear-gradient(130deg, #050202 10%, #010101 46%, #000 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(130deg, #050202 10%, #010101 46%, #000 100%);
-  /* IE10+ */
-  background: linear-gradient(
-    100deg,
-    #050202 10%,
-    #010101 46%,
-    #000 100%
-  ); /* W3C */
   @media all and (min-width: 480px) and (max-width: 1280px) { 
-    height: fit-content
-    width: fit-content;
-    padding: 1;
-    margin: 1;
+    height: auto;
+    width: auto;
+    padding: .25;
+    margin: 0;
     display: flex;
     flex-direction:column;
   }
 }
-.content h5 {
-  font: 53px CaptMarvel;
-  position: absolute;
-  justify-content: center;
-  padding: 3%;
+  h5 {
+  font: 50px CaptMarvel;
+  display: flexbox;
+  align-content:center;
   color: #fff;
-  /* padding-top: 5em; */
-  bottom: 5.5rem;
+  top: 1.5rem;
 
 @media all and (min-width: 1024px) and (max-width: 1280px) {
-  font-size: 40px;
-  position:relative;
+  
  }
  
 @media all and (min-width: 768px) and (max-width: 1024px) {
@@ -757,154 +629,328 @@ margin-bottom: auto;}
  }
  
 }
-#head{
-  bottom: 16.5rem;
-  font: 70px CaptMarvel;
-  @media all and (min-width: 1024px) and (max-width: 1280px) { 
-    margin-bottom: auto;}
-  @media all and (min-width: 768px) and (max-width: 1024px) { 
-  margin-bottom: auto;}
-  @media all and (min-width: 480px) and (max-width: 768px) { 
-  margin-bottom: auto;}
-  @media all and (max-width: 480px) { }
-}
-.flex_container{
-  box-sizing: border-box;
-  position: relative;
-  display: grid;
-  max-width: 100vw;
-  max-height: 100vh;
-  background: #000;
 
-}
-  #narr_section{
+  .flex-container{
+    display: grid;
+    max-width: 100vw;
+    max-height: 100vh;
     background: #000;
-    /* grid-template-columns: auto;
+    grid-template-columns: auto;
     grid-auto-flow: column;
-    column-fill: auto; */
-    justify-content: center;
-    align-items: center;
-  
-
-     padding: 1% 3%;
+    column-fill: auto; 
+    overflow: hidden;
+    padding: .1rem .3rem .1rem .2rem;
      @media all and (min-width: 1024px) and (max-width: 1280px) { 
-       padding: 4% 0% 0% 4%;
+       margin-top: 17%;
      }
  
      @media all and (min-width: 768px) and (max-width: 1024px) { 
-     padding: 3% 0% 0% 3%;
+     margin-top: 15%;
     }
      @media all and (min-width: 480px) and (max-width: 768px) { 
-     padding: 2% 0% 0% 2%;  }
+      margin-top: 13%;  }
      @media all and (max-width: 480px) { 
-      padding: 1% 0% 0% 1%;  }
+      margin-top: 10%;  }
   }
 
   
   .narr_one{
-    position: relative;
-    background-image: url('../Media/Photos/thor.hulk.png');
-    border: solid #010101;
-    border-width:  1.35rem 1rem 1.3rem 1rem;
-    /* padding: 9rem 3rem; */
-    display: grid;
-    grid-template-columns: auto;
-    grid-auto-flow: column;
-    column-count: 3;
-    background-color: #010101;
-    padding: .15rem 0rem 0rem .15rem;
-    width:100%;
-    height: 490px;
-     @media all and (min-width: 1024px) and (max-width: 1280px) { }
- 
-  @media all and (min-width: 768px) and (max-width: 1024px) { }
-   
-  @media all and (min-width: 480px) and (max-width: 768px) { }
-   
-  @media all and (max-width: 480px) { }
-  }
-  
-  @keyframes head{
-    from { background-image: url('../Media/Photos/thor.hulk.png');
-      font-family: Avenged;
-      opacity: 0.85;
-      font-size: 70px; 
-    }
-    to {
-      background-image: url('../Media/Photos/valkyrieSm.png');
-    width: 350px; 
-    height: 450px;
-  font-family: CaptMarvel;
-  font-size: 50px;}
-  
-  }
-  h1{
     position: absolute;
+    border: solid #010101;
+    box-shadow: #111;
     display: grid;
-    width: 550px;
-    height: 450px;
+    grid-auto-flow: column;
+    background-color: #010101;
+    width: 99%;
+    animation-name: fill;
+    animation-duration: 60s;
+    animation-iteration-count: 3;
+    animation-fill-mode: forwards;
+   
+
+  @media all and (min-width: 1024px) and (max-width: 1280px) { }
+ 
+  @media all and (min-width: 768px) and (max-width: 1024px) { 
+  }
+  @media all and (min-width: 480px) and (max-width: 768px) { 
+   }
+   
+  @media all and (max-width: 480px) { 
+     }
+  }
+  @keyframes fill{
+    from { 
+      border-width: .25rem .2rem .2rem .25rem;
+      height: 98%;
+      padding: .55rem .5rem .5rem .55rem;
+
+      
+    }
+    0% {
+      border-width: 1rem;
+      height: 98%;
+      padding: .55rem .5rem .5rem .55rem;
+
+    }
+    12.5% {
+      border-width: 1rem;
+      height: 98%;
+      padding: .54rem .49rem .54rem .49rem;
+
+    }
+    23.5% {
+      border-width: .95rem;
+      height: 98%;
+      padding: .53rem .48rem .53rem .48rem;
+
+    }
+    36% {border-width: .9rem;
+      height: 98%;
+      padding: .52rem .47rem .52rem .47rem;
+    }
+    48.5% {
+      height: 98%;
+      border-width: .85rem;
+      padding: .51rem .46rem .51rem .46rem;
+
+    }
+    50% {
+      height: 99%;
+      border-width: .85rem;
+      padding: .5rem .45rem .5rem .45rem;
+
+  }
+    61% {
+      border-width: .8rem;
+      height: 99%;
+      padding: .49rem .44rem .49rem .44rem;
+
+   
+    }
+    73.5% {     
+      border-width: .75rem;
+      height: 99%;
+      padding: .48rem .43rem .48rem .43rem;
+
+    }
+    86% {
+      border-width: .75rem;
+      height: 99%;
+      padding: .47rem .42rem .47rem .42rem;
+
+    }
+    98.5% {
+      border-width: .7rem;
+      height: 100%;
+      padding: .46rem .41rem .46rem .41rem;
+
+    }
+    100% {
+      padding: .46rem .41rem .46rem .41rem;
+
+      border-width: .7rem;
+      height: 100%;
+    } 
+  to {
+    height: 100%;
+    border-width: .7rem;
+    padding: .46rem .41rem .46rem .41rem;
+
+}
+}
+
+  
+   
+  
+  
+  h1{
+    background-size: cover;
+    background-attachment:scroll;
+    grid-auto-columns: auto;
+   grid-area: auto;
+    column-count: 1;
     border: solid #020202;
     color:#fff;
     background-color: #000;
-    border-width: 1.25rem 1rem 1rem .25rem;
-    padding: .25rem 0rem 0rem .2rem;
-    font-family: CaptMarvel;
-    font-size: 50px;
-    animation-name: head;
-    animation-duration: 30s;
-    animation-iteration-count: 3;
+    animation-duration: 60s;
     animation-fill-mode: forwards;
+    animation-name: head;
+    text-align: center;
+    display: flex;
+    align-items: center;
     
   }
+  @keyframes head{
+    from { 
+      background-image: url('../Media/Photos/thor.hulk.png');
+      font-size: 40px;
+      width: 95%;
+      height: 99%; }
+      0% {
+        width: 95%;
+        height: 99%;
+        font-size: 40.5px;
+      }
+      12.5% {
+        font-size: 41.5px;
+        width: 95%;
+    height: 97%;
+      }
+      23.5% {
+        width: 96%;
+    height: 96%;
+        font-size: 42px;
+      }
+      36% {
+        font-size: 43px;
+        width: 96%;
+        height: 95%;
+      }
+      48.5% {
+        font-size: 43.5px;
+        width: 97%;
+        height: 94%;
+      }
+      50% {
+        font-size: 43.5px;
+        width: 97%;
+        height: 94%;
+    }
+      61% {
+        font-size: 44px;
+        width: 97%;
+      height: 93%;
+      }
+      73.5% {
+        font-size: 44.5px;
+        width: 98%;
+        height: 91%;
+      }
+      86% {
+        font-size: 44px;
+        width: 98%;
+        height: 90%;
+      }
+      98.5% {
+        font-size: 43.5px;
+        width: 99%;
+        height: 89%;
+      }
+      100% {
+        font-size: 43.5px;
+        width: 100%;
+        height: 89%;
+      } 
+    to {
+      background-image: url('../Media/Photos/valkyrieSm.png');
+      font-size: 43.5px;
+      width: 100%;
+      height: 89%;
+
+  }
+}
   
   @keyframes p{
-    from { background-image: url('../Media/Photos/thor.hulk.png');
+    from {     
+      background-image: url('../Media/Photos/thor.hulk.png');
       font-family: CaptMarvel;
-      font-size: 8px;
-    width: 400px; }
-    to {
-      background-image: url('../Media/Photos/lokiSm.png');
-      font-size: 16px;
-      width: 650px; 
-     height: 100%;  }
-  }
+        font-size: 20px;
+        width: 100%;
+        height: 99%; 
+        }
+        0% {
+          width: 100%;
+        height: 99%;
+          font-size: 20px;
+        }
+        12.5% {
+          font-size: 20px;
+          width: 99%;
+        height: 97%;
+        }
+        23.5% {
+          width: 98%;
+        height: 96%;
+          font-size: 20px;
+        }
+        36% {
+          font-size: 20px;
+          width: 98%;
+        height: 95%;
+        }
+        48.5% {
+          font-size: 19px;
+          width: 97%;
+          height: 94%;
+        }
+        50% {
+          font-size: 19px;
+          width: 97%;
+        height: 94%;
+      }
+        61% {
+          font-size: 19px;
+          width: 96%;
+        height: 93%;
+        }
+        73.5% {
+          font-size: 19px;
+          width: 96%;
+        height: 91%;
+        }
+        86% {
+          font-size: 18px;
+          width: 95%;
+        height: 90%;
+        }
+        98.5% {
+          font-size: 18px;
+          width: 95%;
+        height: 89%;
+        }
+        100% {
+          font-size: 18px;
+          width: 94%;
+        height: 89%;
+        } 
+      to {
+        background-image: url('../Media/Photos/lokiSm.png');
+        font-size: 15px;
+        width: 94%;
+      height: 89%;
+  
+      }}
+  
     
     p{
-      
-      position: absolute;
-      display: grid;
-      align-content: center;
-    width: 650px;
-    height: 105%;
+    grid-auto-columns: auto;
+  
+    align-content: center;
     border: solid #020202;
     background-color: #000;
-    border-width: 1.25rem 1.2rem 1.25rem 1.2rem;
-    padding: .25rem 0rem 0rem .2rem;
-  
+    overflow: hidden;
     font-weight: 600;
     color: white;
-    font-size: 20px;  
-    font-family: CaptMarvel;
     animation-name: p;
-    animation-duration: 20s;
-    animation-iteration-count: 3;
+    animation-duration: 60s;
     animation-fill-mode: forwards;}
 
     button{
+      margin: 5%;
+      padding: 2% 4%;
+
+      display: flex;
       border-radius: 54%;
-      padding: 10px 21px;
       font-style: oblique;
       font-size: 1rem;
+      text-decoration: none;
       font-weight: 700;
       color: white;
       height: 100px;
       width: 200px;
-      right: 4.0rem;
-      bottom: -14%;
       align-items: center;
       opacity: 0.9;
       box-shadow: .5px 2px .5px 1px white;
-      position: absolute;
       background: -webkit-linear-gradient(
         130deg,
         #000 12%,
@@ -917,8 +963,9 @@ margin-bottom: auto;}
     #play_button:hover{
       background-color: #020202;
       color:white;
-      box-shadow: 1px 2px 1px 1px white;
-      transform: scale(2,2);
+      box-shadow: 2px 2px 1.5px 1px gold;
+      transform: scale(1.2,1.2);
+      font-size: 1.5rem;
       border: solid .25rem white; 
       font-family: BP;
     
@@ -927,6 +974,6 @@ margin-bottom: auto;}
   #audio_section{
     display: flex;
     flex-direction: row;
-    margin: 3rem .5rem;
+    top: 50rem;
     position: relative;
-  };
+  }; 
